@@ -28,7 +28,7 @@ Use a short, descriptive name for what the branch does, e.g.:
 ## Commits & PRs
 
 - Keep each pull request focused on one task or one piece of the analysis.
-- Write commit messages that explain *why*, not just *what*.
+- Write brief, descriptive commit messages.
 - In the PR description, note how you tested/verified the change (e.g. "ran `preprocessing.py` end to end, spot-checked 5 rows against the source").
 - Pull the latest `main` before starting new work to avoid painful merge conflicts.
 
@@ -40,6 +40,6 @@ Use a short, descriptive name for what the branch does, e.g.:
 
 ## Code Style
 
-- Put reusable/pipeline logic in `src/` scripts (`preprocessing.py`, `features.py`, `eda.py`), not only in notebooks — the rubric requires scripts, not just notebooks.
+- Put reusable/pipeline logic in `src/` scripts (`preprocessing.py`, `features.py`, `eda.py`)
 - Notebooks in `notebooks/` are fine for exploration, but anything that needs to run to reproduce the analysis should end up as a script.
 - Add a short docstring or comment at the top of new scripts/functions explaining what they do.
