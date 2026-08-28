@@ -1,6 +1,6 @@
 # The Untold Stories in Public Data
 
-A data storytelling project for Module Project 1. Two of us pick a publicly available dataset, dig into it, and turn what we find into a public-facing story — plus the reproducible analysis behind it.
+A data storytelling project for Module Project 1.
 
 **Status:** dataset and story angle not yet chosen. This README will be filled in as those decisions are made — see the TBD markers below.
 
@@ -13,8 +13,8 @@ A data storytelling project for Module Project 1. Two of us pick a publicly avai
 ## Deliverables
 
 - **Public communication piece:** _link TBD_ (blog post / podcast / YouTube video / infographic)
-- **Presentation:** in class, Sep 29 (8 minutes max) — slides linked from [`presentation/`](presentation/)
-- **This repository:** code, data, and documentation for the analysis behind the story
+- **Presentation:** slides linked from [`presentation/`](presentation/)
+- **Github Repository:** code, data, and documentation for the analysis behind the story
 
 ## Dataset
 
