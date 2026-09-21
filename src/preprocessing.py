@@ -4,9 +4,6 @@ preprocessing.py
 Loads the raw dataset from data/raw/, cleans it (handles missing values,
 fixes types, drops/renames columns as needed), and writes the cleaned
 result to data/processed/.
-
-TODO: once a dataset is chosen, implement load_raw(), clean(), and
-save_processed() below and update the file paths.
 """
 import pandas as pd
 from pathlib import Path

@@ -46,35 +46,6 @@ def plot_calls_by_district(df):
     plt.close()
 
 
-def plot_priority_by_district(df):
-    """Heatmap of priority distribution by district, and mean priority by district."""
-    # 1. Heatmap: % distribution of priority within each district (row-normalized)
-    pivot = pd.crosstab(df['District'], df['Priority'])
-    pivot_pct = pivot.div(pivot.sum(axis=1), axis=0) * 100
-
-    plt.figure(figsize=(10, 6))
-    sns.heatmap(pivot_pct, annot=True, fmt='.1f', cmap='rocket_r')
-    plt.title('Priority Call Percentages by District (9 = highest priority)')
-    plt.xlabel('Priority Rank')
-    plt.ylabel('District')
-    plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'priority_by_district_heatmap.png', dpi=150)
-    plt.close()
-
-    # 2. Summary: mean priority rank by district — direct comparison, volume-adjusted
-    mean_priority = df.groupby('District', observed=True)['Priority'].mean().sort_values(ascending=False)
-
-    plt.figure(figsize=(10, 6))
-    mean_priority.plot(kind='bar', color='indianred')
-    plt.title('Average Call Priority by District (higher = more urgent calls on average)')
-    plt.xlabel('District')
-    plt.ylabel('Mean Priority Rank')
-    plt.xticks(rotation=0)
-    plt.tight_layout()
-    plt.savefig(FIGURES_DIR / 'mean_priority_by_district.png', dpi=150)
-    plt.close()
-
-
 def plot_call_density_by_priority(df):
     """Hexbin maps of call density, one panel per priority level, on a shared extent."""
     gdf = gpd.GeoDataFrame(
@@ -199,7 +170,6 @@ def main():
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
     df = load_data_calls()
     plot_calls_by_district(df)
-    plot_priority_by_district(df)
     plot_call_density_by_priority(df)
     plot_report_outcomes(df)
     plot_monthly_trends(df)
