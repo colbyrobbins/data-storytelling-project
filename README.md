@@ -1,29 +1,25 @@
-# The Untold Stories in Public Data
+# Getting the Record Straight
 
-A data storytelling project for Module Project 1.
-
-**Status:** dataset and story angle not yet chosen. This README will be filled in as those decisions are made — see the TBD markers below.
+A data storytelling project investigating trends in Durham Police Department calls and reports.
 
 ## Overview
 
-- **Topic / dataset:** _TBD_
-- **Audience — who this story is for and why it matters to them:** _TBD_
-- **The story we're telling:** _TBD_
+- **Topic / dataset:** DPD Calls for Service (2025)
+- **Audience — who this story is for and why it matters to them:** This project aims to provide the Durham community with insights about trends in crime vs crime reporting in their city.
+- **The story we're telling:** [something about large majority of calls never reported, and how reporting rate/crime trends change over the year and across the city geographically]
 
 ## Deliverables
 
-- **Public communication piece:** _link TBD_ (blog post / podcast / YouTube video / infographic)
+- **Public communication piece:** Investigative Article
 - **Presentation:** slides linked from [`presentation/`](presentation/)
 - **Github Repository:** code, data, and documentation for the analysis behind the story
 
 ## Dataset
 
-_To fill in once we've picked a dataset:_
-
-- **Source:** 
-- **Citation:** 
-- **License / usage terms:** 
-- **Access:** raw data lives in [`data/raw/`](data/raw/); if it's too large or restricted to commit, see [`data/raw/README.md`](data/raw/README.md) for how to get it instead.
+- **Source:** City and County of Durham, NC (ArcGIS Online)
+- **Citation:** City of Durham, North Carolina. (2025). DPD Calls for Service (2025) [Data set]. Durham Open Data. https://live-durhamnc.opendata.arcgis.com/datasets/c55a356fa8ea49d3a8898c67f9282435/about
+- **License / usage terms:** Free public data, no license
+- **Access:** raw data lives in [`data/raw/`](data/raw/)
 
 ## Project Structure
 
@@ -79,8 +75,6 @@ python3 src/preprocessing.py   # data/raw/  ->  data/processed/
 python3 src/features.py        # adds engineered features to data/processed/
 python3 src/eda.py             # generates the charts saved to reports/figures/
 ```
-
-(Exact commands/arguments will be updated here once these scripts are built out.)
 
 ## Team Workflow
 
