@@ -8,8 +8,7 @@
 4. Commit with a clear, descriptive message.
 5. Push your branch to GitHub.
 6. Open a pull request describing what changed and why.
-7. Request a review from your teammate.
-8. Merge only after review.
+8. Merge.
 
 Each of us needs at least one visible pull request over the course of the project — smaller, more frequent PRs are easier to review than one giant one at the end.
 
@@ -19,9 +18,6 @@ Use a short, descriptive name for what the branch does, e.g.:
 
 - `data-sourcing`
 - `preprocessing`
-- `eda-<topic>` (e.g. `eda-trends-by-region`)
-- `feature-engineering`
-- `viz-<chart-name>`
 - `docs-readme`
 - `fix-<short-description>`
 
