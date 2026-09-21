@@ -3,9 +3,6 @@ features.py
 
 Feature engineering on the cleaned dataset in data/processed/. Adds any
 derived columns/aggregations used in the analysis and re-saves the result.
-
-TODO: once preprocessing.py is in place, implement load_processed(),
-engineer_features(), and save() below.
 """
 import pandas as pd
 from pathlib import Path
