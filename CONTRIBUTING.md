@@ -10,8 +10,6 @@
 6. Open a pull request describing what changed and why.
 8. Merge.
 
-Each of us needs at least one visible pull request over the course of the project — smaller, more frequent PRs are easier to review than one giant one at the end.
-
 ## Branch Names
 
 Use a short, descriptive name for what the branch does, e.g.:
@@ -25,7 +23,6 @@ Use a short, descriptive name for what the branch does, e.g.:
 
 - Keep each pull request focused on one task or one piece of the analysis.
 - Write brief, descriptive commit messages.
-- In the PR description, note how you tested/verified the change (e.g. "ran `preprocessing.py` end to end, spot-checked 5 rows against the source").
 - Pull the latest `main` before starting new work to avoid painful merge conflicts.
 
 ## Data & Secrets
