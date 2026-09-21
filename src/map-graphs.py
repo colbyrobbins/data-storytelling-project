@@ -22,6 +22,7 @@ import matplotlib.pyplot as plt
 import contextily as ctx
 
 
+
 PROCESSED_DIR = Path(__file__).resolve().parent.parent / "data" / "processed"
 
 
