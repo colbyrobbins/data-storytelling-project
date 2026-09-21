@@ -25,6 +25,7 @@ import contextily as ctx
 PROCESSED_DIR = Path(__file__).resolve().parent.parent / "data" / "processed"
 
 
+
 def load_data_calls(filename="dpd_calls_2025_features.csv"):
     """Read the feature-engineered dataset."""
     filepath = PROCESSED_DIR / filename
