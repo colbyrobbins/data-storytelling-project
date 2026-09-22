@@ -2,6 +2,8 @@
 
 A data storytelling project investigating trends in Durham Police Department calls and reports.
 
+An analysis by Jothi Gupta & Colby Robbins for AIPI 510.
+
 ## Overview
 
 - **Topic / dataset:** DPD Calls for Service (2025)
