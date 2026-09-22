@@ -6,3 +6,7 @@ In our public deliverable, we've put together an article detailing our research,
 ## To access the project
 
 Navigate to: public communication piece/Setting-the-Record-Straight
+
+## Sources
+
+Durham county developmental tiers: https://live-durhamnc.opendata.arcgis.com/datasets/development-tiers-1
