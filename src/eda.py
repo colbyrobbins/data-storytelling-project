@@ -49,6 +49,19 @@ def plot_calls_by_district(df):
     plt.savefig(FIGURES_DIR / 'calls_by_district.png', dpi=150)
     plt.close()
 
+def examine_unreported_calls(df):
+    """Examine calls that did not result in a report being filed."""
+    plt.figure(figsize=(10, 7))
+    top5 = df[~df['filed_report']]['Disposition'].value_counts().head(5).sort_values(ascending=True)
+    top5.plot(kind='barh')
+    plt.title('Top 5 Dispositions for Unreported Calls', fontsize=20, fontweight='bold')
+    plt.ylabel('Disposition', fontsize=16)
+    plt.xlabel('Number of Calls', fontsize=16)
+    plt.xticks(rotation=45, ha='right', fontsize=13)
+    plt.yticks(fontsize=13)
+    plt.tight_layout()
+    plt.savefig(FIGURES_DIR / 'unreported_calls_by_disposition.png', dpi=150)
+    plt.close()
 
 def plot_call_density_by_priority(df):
     """Hexbin maps of call density, one panel per priority level, on a shared extent."""
@@ -181,6 +194,7 @@ def main():
     plot_call_density_by_priority(df)
     plot_report_outcomes(df)
     plot_monthly_trends(df)
+    examine_unreported_calls(df)
 
 
 if __name__ == "__main__":
