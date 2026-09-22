@@ -17,6 +17,10 @@ import contextily as ctx
 PROCESSED_DIR = Path(__file__).resolve().parent.parent / "data" / "processed"
 FIGURES_DIR = Path(__file__).resolve().parent.parent / "figures"
 
+def show_info(df):
+    """Print basic info about the dataframe."""
+    print("DataFrame Info:")
+    print(df.info())
 
 def load_data_calls(filename="dpd_calls_2025_features.csv"):
     """Read the feature-engineered dataset."""
@@ -99,15 +103,16 @@ def plot_report_outcomes(df):
     # 1. Overall 3-part pie
     report_counts = df['report_category'].value_counts()
 
-    plt.figure(figsize=(7, 7))
+    plt.figure(figsize=(10, 10))
     plt.pie(
         report_counts,
         labels=report_counts.index,
         autopct='%1.1f%%',
         colors=[colors[c] for c in report_counts.index],
-        startangle=90
+        startangle=90,
+        textprops={'fontsize': 16} 
     )
-    plt.title('Overall Split: Report Outcome of Calls for Service')
+    plt.title('Overall Split: Report Outcome of Calls for Service', fontsize=20, fontweight='bold')
     plt.tight_layout()
     plt.savefig(FIGURES_DIR / 'report_outcome_pie.png', dpi=150)
     plt.close()
@@ -140,15 +145,16 @@ def plot_monthly_trends(df):
     )
 
     # Calls vs. reports, log scale
-    fig, ax = plt.subplots(figsize=(12, 6))
+    fig, ax = plt.subplots(figsize=(14, 8))
     monthly['total_calls'].plot(ax=ax, marker='o', label='Total Calls for Service', color='steelblue')
     monthly['total_reports'].plot(ax=ax, marker='o', label='Total Reports Filed', color='indianred')
 
     ax.set_yscale('log')
-    ax.set_title('Calls for Service vs. Reports Filed, by Month (2025)')
-    ax.set_ylabel('Count (log scale)')
-    ax.set_xlabel('Month')
-    ax.legend()
+    ax.set_title('Calls for Service vs. Reports Filed, by Month (2025)', fontsize=20, fontweight='bold')
+    ax.set_ylabel('Count (log scale)', fontsize=16)
+    ax.set_xlabel('Month', fontsize=16)
+    ax.tick_params(axis='both', labelsize=14)
+    ax.legend(fontsize=14)
     plt.tight_layout()
     plt.savefig(FIGURES_DIR / 'monthly_calls_vs_reports.png', dpi=150)
     plt.close()
@@ -156,11 +162,12 @@ def plot_monthly_trends(df):
     # Report rate by month
     monthly['report_rate'] = monthly['total_reports'] / monthly['total_calls'] * 100
 
-    fig, ax = plt.subplots(figsize=(12, 5))
+    fig, ax = plt.subplots(figsize=(14, 8))
     monthly['report_rate'].plot(ax=ax, marker='o', color='darkorange')
-    ax.set_title('Report Rate by Month (2025)')
-    ax.set_ylabel('% of Calls Resulting in a Report')
-    ax.set_xlabel('Month')
+    ax.set_title('Report Rate by Month (2025)', fontsize=20, fontweight='bold')
+    ax.set_ylabel('% of Calls Resulting in a Report', fontsize=16)
+    ax.set_xlabel('Month', fontsize=16)
+    ax.tick_params(axis='both', labelsize=14)
     plt.tight_layout()
     plt.savefig(FIGURES_DIR / 'monthly_report_rate.png', dpi=150)
     plt.close()
@@ -169,6 +176,7 @@ def plot_monthly_trends(df):
 def main():
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
     df = load_data_calls()
+    show_info(df)
     plot_calls_by_district(df)
     plot_call_density_by_priority(df)
     plot_report_outcomes(df)
