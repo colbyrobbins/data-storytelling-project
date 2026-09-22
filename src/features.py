@@ -45,7 +45,7 @@ def engineer_features_calls(df):
             return 'No Report'
 
     df['report_category'] = df['Disposition'].apply(categorize_disposition)
-    df['resulted_in_report'] = df['report_category'] == 'Crime Report'
+    df['crime_report'] = df['report_category'] == 'Crime Report'
     df['filed_report'] = df['report_category'].isin(['Crime Report', 'Other Report'])
 
     return df
