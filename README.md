@@ -74,6 +74,7 @@ Once the dataset is in place, the pipeline runs as:
 python3 src/preprocessing.py   # data/raw/  ->  data/processed/
 python3 src/features.py        # adds engineered features to data/processed/
 python3 src/eda.py             # generates the charts saved to reports/figures/
+python3 src/map-graphs.py      # generates the dataset used in ArcGis mapping
 ```
 
 ## Team Workflow
