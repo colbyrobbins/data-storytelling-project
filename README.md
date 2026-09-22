@@ -40,7 +40,7 @@ A data storytelling project investigating trends in Durham Police Department cal
 | `month` | Year-month of the call (`YYYY-MM`), extracted from `datetime`. |
 | `date` | Calendar date of the call (`YYYY-MM-DD`), extracted from `datetime`. |
 | `report_category` | Classification of `Disposition` into `Crime Report`, `Other Report`, or `No Report`. |
-| `resulted_in_report` | Boolean flag, `True` only when `report_category` is `Crime Report`. |
+| `crime_report` | Boolean flag, `True` only when `report_category` is `Crime Report`. |
 | `filed_report` | Boolean flag, `True` when `report_category` is `Crime Report` or `Other Report` (any formal report filed). |
 
 ## Project Structure
