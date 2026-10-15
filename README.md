@@ -113,10 +113,6 @@ python3 src/map-graphs.py      # generates the dataset used in ArcGis mapping
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for full details, including branch naming and team rules.
 
-## Ethics & Limitations
-
-_To fill in during/after EDA: known biases or gaps in the data, who might be over/under-represented, and any caveats readers should keep in mind when interpreting the story._
-
 ## License
 
 MIT — see [LICENSE](LICENSE).
